@@ -14,7 +14,6 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Data
 @Builder
-@Table(name = "task")
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,9 +21,9 @@ public class Task {
     private String name;
     private String description = "";
     @Enumerated(value = EnumType.STRING)
-    private TaskStatus status = TaskStatus.TODO;
-    private LocalDate done_date = null;
-    private Integer revision_count = 0;
+    private TaskStatus status = TaskStatus.UNASSIGNED;
+    private LocalDate doneDate = null;
+    private Integer revisionCount = 0;
     private Integer estimateHours = 3;
     private Integer actualHours = 3;
     @ManyToOne

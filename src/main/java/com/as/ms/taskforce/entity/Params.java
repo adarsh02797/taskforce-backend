@@ -16,9 +16,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Builder
-@Table(name = "params")
 public class Params {
     @Id
-    private String key;
-    private Object value;
+    private String _key;
+    private String _value;
 }

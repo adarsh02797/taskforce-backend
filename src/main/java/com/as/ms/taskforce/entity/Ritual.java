@@ -18,7 +18,6 @@ import java.util.stream.IntStream;
 @NoArgsConstructor
 @Data
 @Builder
-@Table(name = "ritual")
 public class Ritual {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
